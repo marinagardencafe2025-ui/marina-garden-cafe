@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Marina Garden Café is a relaxing garden restaurant offering delicious food, coffee, and special events. Visit us for a beautiful dining experience.">
+<meta name="description" content="Marina Garden Café in Lapu-Lapu City Cebu offers relaxing garden dining, coffee, and events. Visit us for a peaceful restaurant experience.">
+<title>Marina Garden Café Cebu | Garden Restaurant in Lapu-Lapu City</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+/* MOBILE DESIGN */
+@media (max-width: 768px){
+
+section{
+padding:60px 5%;
+}
+
+.hero{
+height:70vh;
+}
+
+.hero h1{
+font-size:26px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.about,
+.mv,
+.menu-board,
+.menu-two-column,
+.contact{
+grid-template-columns:1fr;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.events{
+grid-template-columns:1fr;
+}
+
+nav ul{
+flex-direction:column;
+}
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+
+section{
+padding:70px 8%;
+}
+
+/* HERO */
+.hero h1{
+font-size:36px;
+}
+
+/* STACK SECTIONS */
+.about,
+.mv,
+.menu-board,
+.menu-two-column,
+.contact{
+grid-template-columns:1fr;
+}
+
+/* 2 COLUMNS LAYOUT */
+.gallery{
+grid-template-columns:repeat(2,1fr);
+}
+
+.events{
+grid-template-columns:repeat(2,1fr);
+}
+
+/* HEADER */
+nav ul{
+gap:15px;
+}
+
+}
+@media (min-width: 1025px) and (max-width: 1440px){
+
+section{
+padding:80px 12%;
+}
+
+/* PERFECT GRID BALANCE */
+.gallery{
+grid-template-columns:repeat(3,1fr);
+}
+
+.events{
+grid-template-columns:repeat(3,1fr);
+}
+
+/* TEXT WIDTH CONTROL */
+.hero p{
+max-width:700px;
+margin:auto;
+}
+
+}
+
+@media (min-width: 1441px){
+
+section{
+padding:90px 15%;
+}
+
+.hero h1{
+font-size:52px;
+}
+
+.hero p{
+font-size:18px;
+max-width:800px;
+margin:auto;
+}
+
+.gallery{
+grid-template-columns:repeat(4,1fr);
+}
+
+}
+
+
+body {
+    background: rgba(2, 43, 8, 0.116); /* soft green tint */
+    color: #044b02;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+display:flex; 
+justify-content:space-between;
+align-items:center;
+padding:8px 6%;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+z-index:1000;
+transition:top 0.4s;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.logo img{
+height:55px;
+}
+.logo h2{
+font-size:20px;
+color:#2f6b3f;
+}
+
+
+/* NAVIGATION */
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+align-items:center;
+}
+
+nav a{
+text-decoration:none;
+font-weight:500;
+color:#2f6b3f;
+padding:8px 0;
+display:inline-block;
+transition:0.3s;
+font-size:16px;
+letter-spacing:0.5px;
+}
+
+nav a:hover{
+background:#2f6b3f;
+color:white;
+transform:translateY(-2px);
+}
+.menu-toggle{
+font-size:20px;
+cursor:pointer;
+display:block;
+color:#2f6b3f;
+}
+
+
+
+/* SOCIAL ICON */
+
+.social-icon{
+display:flex;
+align-items:center;
+justify-content:center;
+width:40px;
+height:40px;
+border-radius:50%;
+color:white;
+font-size:18px;
+transition:.3s;
+}
+
+.facebook{ background:#4267B2; }
+.facebook:hover{ background:#1d3c91; }
+
+.email{ background:#E94E77; }
+.email:hover{ background:#b03c5e; }
+
+/* HERO */
+
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+url("BG.jpg") no-repeat;
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:20px;
+margin-top:70px;
+}
+
+
+.hero h1{
+font-size:48px;
+margin-bottom:15px;
+font-weight:600;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:#2f6b3f;
+color:white;
+border-radius:30px;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+background:#1f4b2c;
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:40px;
+color:#2f6b3f;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:10px;
+}
+
+/* MISSION VISION */
+
+.mv{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.mv-box{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.mv-box h3{
+color:#2f6b3f;
+margin-bottom:10px;
+}
+
+/* MENU */
+
+.menu-board{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+text-align:left;
+margin-top:40px;
+}
+
+.menu-category{
+margin-bottom:25px;
+}
+
+.menu-category h3{
+background:#97bc62;
+display:inline-block;
+padding:6px 12px;
+color:#2c5f2d;
+margin-bottom:10px;
+border-radius:5px;
+}
+
+.menu-row{
+display:flex;
+justify-content:space-between;
+padding:4px 0;
+border-bottom:1px dashed #ccc;
+}
+
+.menu-price{
+font-weight:bold;
+}
+
+/* TWO COLUMN MENU */
+
+.menu-two-column{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-top:60px;
+text-align:left;
+}
+
+.menu-box{
+background:rgba(6, 180, 32, 0.783);
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.menu-item{
+display:flex;
+justify-content:space-between;
+padding:5px 0;
+border-bottom:1px dashed #ccc;
+}
+
+/* EVENTS */
+
+.events{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.event-box{
+background:white;
+padding:25px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.event-box:hover{
+transform:translateY(-5px);
+}
+
+.event-box i{
+font-size:40px;
+color:#2f6b3f;
+margin-bottom:15px;
+}
+
+.event-box h3{
+margin-bottom:10px;
+color:#2f6b3f;
+}
+
+.event-box p{
+font-size:14px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+.gallery img.hidden{
+display:none;
+}
+.hidden{
+display:none;
+}
+/* POPUP */
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+z-index:100;
+}
+
+.popup img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+}
+
+.popup .close{
+position:absolute;
+top:30px;
+right:40px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+/* POPUP NAVIGATION */
+.popup .nav{
+ position:absolute;
+ top:50%;
+ transform:translateY(-50%);
+ font-size:50px;
+ color:white;
+ cursor:pointer;
+ padding:10px;
+ user-select:none;
+}
+
+.popup .prev{
+ left:30px;
+}
+
+.popup .next{
+ right:30px;
+}
+
+.popup .nav:hover{
+ color:#97bc62;
+}
+
+/* RESTAURANT INFO STYLE */
+
+.info-section{
+background:white;
+border-radius:10px;
+padding:40px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-group{
+margin-bottom:35px;
+border-bottom:1px solid #ddd;
+padding-bottom:20px;
+}
+
+.info-group:last-child{
+border-bottom:none;
+}
+
+.info-group h3{
+color:#2f6b3f;
+margin-bottom:15px;
+font-size:20px;
+}
+
+.info-items{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px 30px;
+}
+
+.info-items span{
+display:flex;
+align-items:center;
+gap:8px;
+font-size:15px;
+}
+
+.info-items i{
+color:#2f6b3f;
+}
+/* CONTACT */
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.contact-box{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.social-icons{
+margin-top:20px;
+display:flex;
+gap:10px;
+}
+
+iframe{
+width:100%;
+height:320px;
+border:none;
+border-radius:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:#2f6b3f;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* MOBILE */
+
+.menu-toggle{
+margin-left:auto;
+font-size:24px;
+cursor:pointer;
+color:#2f6b3f;
+display:none;
+}
+@media(max-width:768px){
+
+.logo h2{
+font-size:18px;
+}
+
+.menu-toggle{
+display:block;
+}
+
+nav ul{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:white;
+flex-direction:column;
+align-items:center;
+display:none;
+padding:20px 0;
+gap:15px;
+}
+
+nav ul.active{
+display:flex;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.mv{
+grid-template-columns:1fr;
+}
+
+.menu-board{
+grid-template-columns:1fr;
+}
+
+.menu-two-column{
+grid-template-columns:1fr;
+}
+
+.contact{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="marina.jpg" alt="Marina Garden Cafe Logo">
+<h2>Marina Garden Café</h2>
+</div>
+
+<div class="menu-toggle" id="menu-toggle">
+<i class="fas fa-bars"></i>
+</div>
+
+<nav>
+<ul id="nav-menu" class="nav-menu">
+
+<li><a href="#about">About</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#events">Events</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+<li>
+<a href="https://www.facebook.com/Marinagardencafe2021" target="_blank" class="social-icon facebook">
+<i class="fab fa-facebook-f"></i>
+</a>
+</li>
+
+<li>
+<a href="mailto:marinagardencafe2025@gmail.com" class="social-icon email">
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+
+</ul>
+</nav>
+
+</header>
+
+<section class="hero">
+<div>
+
+<h1>Welcome to Marina Garden Café</h1>
+
+<p>
+A relaxing garden-style restaurant in Lapu-Lapu City offering
+delicious food, a welcoming atmosphere, and memorable dining
+experiences for families and friends.
+</p>
+
+<a href="#menu" class="btn">View Menu</a>
+
+</div>
+</section>
+        
+<section id="about">
+
+<h2 class="section-title">About Us</h2>
+
+<div class="about">
+
+<img src="BG.jpg" alt="Marina Garden Cafe">
+
+<div>
+
+<p>
+Marina Garden Café is a garden-inspired restaurant located in
+MEPZ 1, F. Martir Street, Ibo, Lapu-Lapu City, Cebu.
+</p>
+
+<p>
+The café provides a relaxing environment surrounded by greenery,
+offering both indoor and outdoor dining spaces.
+Guests can enjoy Filipino and international dishes,
+fresh seafood, grilled specialties, pasta, and refreshing drinks.
+</p>
+
+<p>
+The restaurant is also a popular venue for birthdays,
+family gatherings, and casual dining experiences.
+</p>
+
+<p><strong>Average Dining Cost:</strong> ₱400 – ₱600 per person</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="mv">
+
+<h2 class="section-title">Mission & Vision</h2>
+
+<div class="mv">
+
+<div class="mv-box">
+To provide guests with high-quality food and excellent service in a relaxing garden-style environment, while promoting fresh ingredients, local flavors, and memorable dining experiences for families, friends, and visitors.
+</div>
+
+<div class="mv-box">
+To become a leading dining destination known for its beautiful garden ambiance, delicious cuisine, and warm hospitality, creating a place where people can enjoy nature, good food, and meaningful moments together.
+</div>
+
+</div>
+
+</section>
+
+
+<section id="menu">
+<div class="mv-box">
+<h2 class="section-title">Our Menu</h2>
+
+<div class="gallery" id="menuGrid">
+
+<img src="M1.jpg" onclick="openPopup(this.src)">
+<img src="M2.jpg" onclick="openPopup(this.src)">
+<img src="M3.jpg" onclick="openPopup(this.src)">
+<img src="M4.jpg" onclick="openPopup(this.src)">
+
+
+<img src="M4.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="M5.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="M6.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="M6.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="M7.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="M8.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="M9.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="M10.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="M11.jpg" class="hidden" onclick="openPopup(this.src)">
+</div>
+
+<div style="text-align:center;margin-top:30px;">
+<button class="btn" onclick="toggleMenu()" id="menuBtn">
+Show More
+</button>
+</div>
+
+</section>
+
+
+<!-- POPUP -->
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+
+<span class="close" onclick="closePopup()">&times;</span>
+
+<span class="nav prev" onclick="prevImage()">&#10094;</span>
+
+<img id="popup-img">
+
+<span class="nav next" onclick="nextImage()">&#10095;</span>
+
+</div>
+<section id="events">
+<div class="mv-box">
+<h2 class="section-title">Event Package</h2>
+
+<div class="gallery" id="eventsGrid">
+
+<img src="PM1.jpg" onclick="openPopup(this.src)">
+<img src="PM2.jpg" onclick="openPopup(this.src)">
+<img src="EM.jpg" onclick="openPopup(this.src)">
+
+</div>
+</div>
+
+<div style="text-align:center;margin-top:30px;">
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="mv-box">
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery" id="galleryGrid">
+
+<img src="g1.jpg.jpg" onclick="openPopup(this.src)">
+<img src="g2.JPG.jpg" onclick="openPopup(this.src)">
+<img src="g3.JPG.jpg" onclick="openPopup(this.src)">
+<img src="g4.jpg" onclick="openPopup(this.src)">
+<img src="g5.jpg" onclick="openPopup(this.src)">
+<img src="g6.jpg" onclick="openPopup(this.src)">
+<img src="g7.jpg" onclick="openPopup(this.src)">
+<img src="g8.jpg" onclick="openPopup(this.src)">
+
+<img src="g9.jpg"  onclick="openPopup(this.src)">
+<img src="g10.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="g11.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="g12.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="g13.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="g14.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="g15.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="g16.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="g17.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="g18.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="g19.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="g20.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="G21.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="g22.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="G23.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="G24.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="G25.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="G26.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="G27.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="G28.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="G29.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="G30.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="G31.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="G32.jpg" class="hidden" onclick="openPopup(this.src)">
+<img src="g33.jpg" class="hidden" onclick="openPopup(this.src)">
+</div>
+
+<div style="text-align:center;margin-top:30px;">
+<button class="btn" onclick="toggleGallery()" id="galleryBtn">
+Show More
+</button>
+</div>
+</div>
+</section>
+
+<section id="info">
+    <div class="info-section">
+<h2 class="section-title">Restaurant Information</h2>
+
+
+
+<div class="info-group">
+<h3>Service options</h3>
+<div class="info-items">
+<span><i class="fas fa-check"></i> Outdoor seating</span>
+<span><i class="fas fa-check"></i> Onsite services</span>
+<span><i class="fas fa-check"></i> Takeout</span>
+<span><i class="fas fa-check"></i> Dine-in</span>
+</div>
+</div>
+
+<div class="info-group">
+<h3>Highlights</h3>
+<div class="info-items">
+<span><i class="fas fa-check"></i> Great coffee</span>
+<span><i class="fas fa-check"></i> Great dessert</span>
+</div>
+</div>
+
+<div class="info-group">
+<h3>Popular for</h3>
+<div class="info-items">
+<span><i class="fas fa-check"></i> Lunch</span>
+<span><i class="fas fa-check"></i> Dinner</span>
+<span><i class="fas fa-check"></i> Solo dining</span>
+</div>
+</div>
+
+<div class="info-group">
+<h3>Offerings</h3>
+<div class="info-items">
+<span><i class="fas fa-martini-glass"></i> Alcohol</span>
+<span><i class="fas fa-beer"></i> Beer</span>
+<span><i class="fas fa-martini-glass"></i> Cocktails</span>
+<span><i class="fas fa-check"></i> Coffee</span>
+<span><i class="fas fa-check"></i> Quick bite</span>
+<span><i class="fas fa-check"></i> Small plates</span>
+</div>
+</div>
+
+<div class="info-group">
+<h3>Dining options</h3>
+<div class="info-items">
+<span><i class="fas fa-check"></i> Brunch</span>
+<span><i class="fas fa-check"></i> Lunch</span>
+<span><i class="fas fa-check"></i> Dinner</span>
+<span><i class="fas fa-check"></i> Catering</span>
+<span><i class="fas fa-check"></i> Dessert</span>
+<span><i class="fas fa-check"></i> Seating</span>
+<span><i class="fas fa-check"></i> Table service</span>
+</div>
+</div>
+
+<div class="info-group">
+<h3>Amenities</h3>
+<div class="info-items">
+<span><i class="fas fa-cocktail"></i> Bar onsite</span>
+<span><i class="fas fa-restroom"></i> Restroom</span>
+</div>
+</div>
+
+<div class="info-group">
+<h3>Atmosphere</h3>
+<div class="info-items">
+<span><i class="fas fa-check"></i> Casual</span>
+<span><i class="fas fa-check"></i> Cozy</span>
+<span><i class="fas fa-check"></i> Trendy</span>
+</div>
+</div>
+
+<div class="info-group">
+<h3>Crowd</h3>
+<div class="info-items">
+<span><i class="fas fa-users"></i> Groups</span>
+<span><i class="fas fa-user"></i> Tourists</span>
+</div>
+</div>
+
+<div class="info-group">
+<h3>Planning</h3>
+<div class="info-items">
+<span><i class="fas fa-check"></i> Accepts reservations</span>
+</div>
+</div>
+
+<div class="info-group">
+<h3>Payments</h3>
+<div class="info-items">
+<span><i class="fas fa-credit-card"></i> Credit cards</span>
+</div>
+</div>
+
+<div class="info-group">
+<h3>Children</h3>
+<div class="info-items">
+<span><i class="fas fa-child"></i> Good for kids</span>
+</div>
+</div>
+
+</div>
+
+</section>
+<section id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact">
+
+<div class="contact-box">
+
+<p><strong>Location</strong><br>
+    
+MEPZ 1, F. Martir St., Ibo,<br>
+Lapu-Lapu City, Cebu</p>
+
+<br>
+
+<p><strong>Phone</strong><br>
+0915 958 2378</p>
+
+<br>
+
+<p><strong>Opening Hours</strong><br>
+Mon – Thu: 10 AM – 10 PM<br>
+Fri – Sun: 10 AM – 11 PM
+</p>
+
+<div class="social-icons">
+
+<a href="https://www.facebook.com/Marinagardencafe2021" target="_blank" class="social-icon facebook">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="mailto:marinagardencafe2025@gmail.com" class="social-icon email">
+<i class="fas fa-envelope"></i>
+</a>
+
+</div>
+
+</div>
+
+<iframe
+src="https://maps.google.com/maps?q=Marina%20Garden%20Cafe%20MEPZ%201%20Lapu%20Lapu%20City&t=&z=17&ie=UTF8&iwloc=&output=embed"
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+<p>Located in Lapu-Lapu City Cebu, Marina Garden Café offers a relaxing garden restaurant experience.</p>
+
+<script>
+
+/* MOBILE MENU */
+
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.onclick = function(){
+navMenu.classList.toggle("active");
+};
+
+let lastScroll = 0;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", function(){
+
+let currentScroll = window.pageYOffset;
+
+if(currentScroll > lastScroll){
+header.style.top = "-90px";
+}else{
+header.style.top = "0";
+}
+
+lastScroll = currentScroll;
+
+});
+
+
+/* GALLERY POPUP */
+
+let images = [];
+let currentIndex = 0;
+
+/* OPEN POPUP */
+function openPopup(src){
+
+const popup = document.getElementById("popup");
+const popupImg = document.getElementById("popup-img");
+
+/* collect images from BOTH menu and gallery */
+const menuImgs = Array.from(document.querySelectorAll("#menuGrid img"));
+const galleryImgs = Array.from(document.querySelectorAll("#galleryGrid img"));
+
+images = [...menuImgs, ...galleryImgs].map(img => img.src);
+
+currentIndex = images.indexOf(src);
+
+popup.style.display = "flex";
+popupImg.src = src;
+
+}
+
+/* NEXT IMAGE */
+function nextImage(){
+
+currentIndex++;
+
+if(currentIndex >= images.length){
+currentIndex = 0;
+}
+
+document.getElementById("popup-img").src = images[currentIndex];
+
+}
+
+/* PREVIOUS IMAGE */
+function prevImage(){
+
+currentIndex--;
+
+if(currentIndex < 0){
+currentIndex = images.length - 1;
+}
+
+document.getElementById("popup-img").src = images[currentIndex];
+
+}
+
+/* CLOSE POPUP */
+function closePopup(){
+document.getElementById("popup").style.display = "none";
+}
+
+/* CLOSE IF CLICK OUTSIDE */
+document.getElementById("popup").addEventListener("click", function(e){
+if(e.target.id === "popup"){
+closePopup();
+}
+});
+
+/* KEYBOARD NAVIGATION */
+document.addEventListener("keydown", function(e){
+
+if(document.getElementById("popup").style.display === "flex"){
+
+if(e.key === "ArrowRight"){
+nextImage();
+}
+
+if(e.key === "ArrowLeft"){
+prevImage();
+}
+
+if(e.key === "Escape"){
+closePopup();
+}
+
+}
+
+});
+
+/* KEYBOARD NAVIGATION */
+document.addEventListener("keydown", function(e){
+
+if(document.getElementById("popup").style.display === "flex"){
+
+if(e.key === "ArrowRight"){
+nextImage();
+}
+
+if(e.key === "ArrowLeft"){
+prevImage();
+}
+
+if(e.key === "Escape"){
+closePopup();
+}
+
+}
+
+
+});
+
+
+/* SHOW MORE GALLERY */
+
+let galleryExpanded = false;
+
+function toggleGallery(){
+
+const images = document.querySelectorAll("#galleryGrid img");
+const btn = document.getElementById("galleryBtn");
+
+images.forEach((img, index)=>{
+if(index > 7){
+img.classList.toggle("hidden");
+}
+});
+
+galleryExpanded = !galleryExpanded;
+
+btn.innerText = galleryExpanded ? "Show Less" : "Show More";
+}
+let menuExpanded = false;
+
+function toggleMenu(){
+
+const images = document.querySelectorAll("#menuGrid img");
+const btn = document.getElementById("menuBtn");
+
+images.forEach((img, index)=>{
+if(index > 7){
+img.classList.toggle("hidden");
+}
+});
+
+menuExpanded = !menuExpanded;
+
+btn.innerText = menuExpanded ? "Show Less" : "Show More";
+}
+</script>
+
+<footer>
+<p>© 2026 Marina Garden Café</p>
+</footer>
+
+</body>
+</html>
